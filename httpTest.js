@@ -21,9 +21,9 @@ Array.prototype.removeByValue = function(val) {
 var sqlConn;
 function handleError(){
 	sqlConn = mysql.createConnection({
-		host     : 'localhost',
-  		user     : 'root',
-  		password : 'pengcheng1994',
+		host     : 'w.rdc.sae.sina.com.cn',
+  		user     : 'l5n31l05kw',
+  		password : 'ilh2yil23h0ihjzi5z112hlx0i4mhmw1j0lky3i2',
   		database : 'app_edvulcan',
   		multipleStatements:true
 	})
@@ -207,7 +207,7 @@ var tcp = net.createServer(function(sock){
 					break;
 				}
 				case "getNoRead": {   //获取未读的人员信息
-					var db = lock.replace('?', 'saveInfo') + getInfos_noRead + unlock;
+					var db = getInfos_noRead;
 					sqlConn.query(db,function (err, result) {
 	        			if(err){
 	        		  		console.log('[SELECT ERROR] - ',err.message);
